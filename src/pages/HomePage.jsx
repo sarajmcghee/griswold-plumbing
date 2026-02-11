@@ -34,6 +34,11 @@ export default function HomePage() {
           </div>
         </div>
         <Card className="self-stretch bg-slate-900/95 text-slate-100">
+          <img
+            src={`${import.meta.env.BASE_URL}assets/client/showerhead.jpg`}
+            alt="Shower head with flowing water"
+            className="mb-4 h-40 w-full rounded-xl object-cover ring-1 ring-slate-700"
+          />
           <PlumbingScene />
           <h2 className="text-xl font-semibold">Why homeowners choose us</h2>
           <ul className="mt-4 space-y-3 text-sm">
@@ -53,6 +58,20 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
+          <Card className="overflow-hidden border border-slate-800 p-0 md:col-span-2">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/client/shower.jpg`}
+              alt="Modern shower fixture"
+              className="h-48 w-full object-cover md:h-56"
+            />
+            <div className="p-5">
+              <p className="text-sm font-semibold uppercase tracking-wide text-brand-200">Fixture Installations</p>
+              <h3 className="mt-1 text-xl font-semibold text-slate-100">Shower upgrades and replacements</h3>
+              <p className="mt-2 text-sm text-slate-200">
+                We install and replace shower heads, valves, and related fixtures with clean finishes and reliable water flow.
+              </p>
+            </div>
+          </Card>
           {services.map((service) => {
             const ServiceIcon = iconByServiceSlug[service.slug] || PipeIcon;
             return (
