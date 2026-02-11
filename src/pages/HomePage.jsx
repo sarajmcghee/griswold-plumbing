@@ -2,7 +2,15 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Container from '../components/Container';
+import { PipeIcon, PlumbingScene, ShowerIcon } from '../components/PlumbingVisuals';
 import { services } from '../data/services';
+
+const iconByServiceSlug = {
+  'drain-cleaning': PipeIcon,
+  'water-heater-repair': ShowerIcon,
+  'leak-detection': PipeIcon,
+  'emergency-plumbing': ShowerIcon
+};
 
 export default function HomePage() {
   return (
@@ -26,6 +34,7 @@ export default function HomePage() {
           </div>
         </div>
         <Card className="self-stretch bg-slate-900/95 text-slate-100">
+          <PlumbingScene />
           <h2 className="text-xl font-semibold">Why homeowners choose us</h2>
           <ul className="mt-4 space-y-3 text-sm">
             <li>Licensed and insured professionals</li>
@@ -44,15 +53,21 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
-          {services.map((service) => (
-            <Card key={service.slug} className="border border-slate-800">
-              <h3 className="text-lg font-semibold text-slate-100">{service.name}</h3>
-              <p className="mt-2 text-sm text-slate-400">{service.summary}</p>
-              <Button as={Link} to={`/services/${service.slug}`} variant="ghost" className="mt-4 px-0">
-                Learn more
-              </Button>
-            </Card>
-          ))}
+          {services.map((service) => {
+            const ServiceIcon = iconByServiceSlug[service.slug] || PipeIcon;
+            return (
+              <Card key={service.slug} className="border border-slate-800">
+                <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-brand-300">
+                  <ServiceIcon className="h-5 w-5" />
+                </span>
+                <h3 className="text-lg font-semibold text-slate-100">{service.name}</h3>
+                <p className="mt-2 text-sm text-slate-400">{service.summary}</p>
+                <Button as={Link} to={`/services/${service.slug}`} variant="ghost" className="mt-4 px-0">
+                  Learn more
+                </Button>
+              </Card>
+            );
+          })}
         </div>
       </section>
     </Container>
