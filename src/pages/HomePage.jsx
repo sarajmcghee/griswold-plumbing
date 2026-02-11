@@ -37,7 +37,7 @@ export default function HomePage() {
           <img
             src={`${import.meta.env.BASE_URL}assets/client/showerhead.jpg`}
             alt="Shower head with flowing water"
-            className="mb-4 h-40 w-full rounded-xl object-cover ring-1 ring-slate-700"
+            className="mb-4 h-52 w-full rounded-xl bg-slate-800 object-contain p-2 ring-1 ring-slate-700"
           />
           <PlumbingScene />
           <h2 className="text-xl font-semibold">Why homeowners choose us</h2>
