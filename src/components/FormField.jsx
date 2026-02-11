@@ -11,7 +11,7 @@ export function FieldError({ children }) {
     return null;
   }
 
-  return <p className="mt-1 text-sm text-red-600">{children}</p>;
+  return <p className="mt-1 text-sm text-red-400">{children}</p>;
 }
 
 export function Input({ className = '', ...props }) {

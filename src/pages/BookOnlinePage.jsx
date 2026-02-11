@@ -105,10 +105,10 @@ export default function BookOnlinePage() {
     <Container className="grid gap-6 lg:grid-cols-[1fr,1.25fr]">
       <Card>
         <h1 className="text-2xl font-bold text-slate-100">Book Plumbing Service Online</h1>
-        <p className="mt-3 text-sm text-slate-400">
+        <p className="mt-3 text-sm text-slate-200">
           Choose your service and preferred appointment time. Once submitted, our dispatcher confirms availability and next steps.
         </p>
-        <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-slate-300">
+        <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-slate-200">
           <li>Pick a date and see available appointment windows.</li>
           <li>Share service details for faster arrival prep.</li>
           <li>Receive booking confirmation by phone/email.</li>

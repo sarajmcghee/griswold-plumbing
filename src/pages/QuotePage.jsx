@@ -78,10 +78,10 @@ export default function QuotePage() {
     <Container className="grid gap-6 lg:grid-cols-[1fr,1.2fr]">
       <Card>
         <h1 className="text-2xl font-bold text-slate-100">Get a Plumbing Quote</h1>
-        <p className="mt-3 text-sm text-slate-400">
+        <p className="mt-3 text-sm text-slate-200">
           Share issue details and photos so we can provide a faster, more accurate estimate.
         </p>
-        <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-slate-300">
+        <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-slate-200">
           <li>Upload multiple photos of the issue area.</li>
           <li>Mark urgency so we can prioritize appropriately.</li>
           <li>Receive a response with next steps and estimate details.</li>
@@ -155,12 +155,12 @@ export default function QuotePage() {
           <div>
             <FieldLabel htmlFor="photos">Upload photos (optional)</FieldLabel>
             <Input id="photos" type="file" accept="image/*" multiple {...register('photos')} />
-            <p className="mt-1 text-xs text-slate-400">JPG, PNG, or HEIC accepted.</p>
+            <p className="mt-1 text-xs text-slate-200">JPG, PNG, or HEIC accepted.</p>
           </div>
 
           {submitState.loading && (
             <div>
-              <p className="mb-2 text-sm text-slate-300">Upload progress</p>
+              <p className="mb-2 text-sm text-slate-200">Upload progress</p>
               <div className="h-2 rounded-full bg-slate-700">
                 <div
                   className="h-2 rounded-full bg-brand-600 transition-all"
@@ -168,7 +168,7 @@ export default function QuotePage() {
                   aria-hidden="true"
                 />
               </div>
-              <p className="mt-1 text-xs text-slate-400" aria-live="polite">
+              <p className="mt-1 text-xs text-slate-200" aria-live="polite">
                 {uploadProgress}% complete
               </p>
             </div>

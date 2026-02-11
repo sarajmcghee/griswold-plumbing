@@ -48,7 +48,7 @@ export default function HomePage() {
       <section>
         <div className="mb-4 flex items-end justify-between">
           <h2 className="text-2xl font-bold text-slate-100">Popular services</h2>
-          <Link to="/services" className="focus-ring rounded text-sm font-semibold text-brand-300 hover:text-brand-200">
+          <Link to="/services" className="focus-ring rounded text-sm font-semibold text-brand-200 hover:text-brand-100">
             View all
           </Link>
         </div>
@@ -57,11 +57,11 @@ export default function HomePage() {
             const ServiceIcon = iconByServiceSlug[service.slug] || PipeIcon;
             return (
               <Card key={service.slug} className="border border-slate-800">
-                <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-brand-300">
+                <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-brand-200">
                   <ServiceIcon className="h-5 w-5" />
                 </span>
                 <h3 className="text-lg font-semibold text-slate-100">{service.name}</h3>
-                <p className="mt-2 text-sm text-slate-400">{service.summary}</p>
+                <p className="mt-2 text-sm text-slate-200">{service.summary}</p>
                 <Button as={Link} to={`/services/${service.slug}`} variant="ghost" className="mt-4 px-0">
                   Learn more
                 </Button>

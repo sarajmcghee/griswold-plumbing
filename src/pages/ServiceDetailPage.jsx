@@ -13,7 +13,7 @@ export default function ServiceDetailPage() {
       <Container>
         <Card>
           <h1 className="text-2xl font-bold">Service not found</h1>
-          <p className="mt-2 text-sm text-slate-400">The requested service does not exist or may have moved.</p>
+          <p className="mt-2 text-sm text-slate-200">The requested service does not exist or may have moved.</p>
           <Button as={Link} to="/services" className="mt-4">
             Back to Services
           </Button>
@@ -25,10 +25,10 @@ export default function ServiceDetailPage() {
   return (
     <Container className="space-y-6">
       <div className="rounded-3xl bg-slate-900 p-8 shadow-card">
-        <p className="text-sm font-semibold uppercase tracking-wide text-brand-300">Service Detail</p>
+        <p className="text-sm font-semibold uppercase tracking-wide text-brand-200">Service Detail</p>
         <h1 className="mt-2 text-3xl font-bold text-slate-100">{service.name}</h1>
-        <p className="mt-4 max-w-3xl text-slate-400">{service.details}</p>
-        <ul className="mt-6 grid gap-2 text-sm text-slate-300 md:grid-cols-2">
+        <p className="mt-4 max-w-3xl text-slate-200">{service.details}</p>
+        <ul className="mt-6 grid gap-2 text-sm text-slate-200 md:grid-cols-2">
           {service.features.map((feature) => (
             <li key={feature} className="rounded-lg bg-slate-800 px-3 py-2">
               {feature}

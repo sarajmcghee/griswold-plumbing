@@ -8,7 +8,7 @@ export default function Button({
   const variants = {
     primary: 'bg-brand-600 text-white hover:bg-brand-700',
     secondary: 'bg-slate-800 text-slate-100 ring-1 ring-slate-700 hover:bg-slate-700',
-    ghost: 'text-brand-300 hover:bg-brand-900/40'
+    ghost: 'text-brand-200 hover:bg-brand-900/40'
   };
 
   return (

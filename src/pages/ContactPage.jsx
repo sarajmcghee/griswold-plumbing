@@ -43,8 +43,8 @@ export default function ContactPage() {
     <Container className="grid gap-6 md:grid-cols-[1fr,1.2fr]">
       <Card>
         <h1 className="text-2xl font-bold">Contact Us</h1>
-        <p className="mt-3 text-sm text-slate-400">Tell us what is going on and we will follow up quickly with next steps.</p>
-        <div className="mt-6 space-y-2 text-sm text-slate-300">
+        <p className="mt-3 text-sm text-slate-200">Tell us what is going on and we will follow up quickly with next steps.</p>
+        <div className="mt-6 space-y-2 text-sm text-slate-200">
           <p>Phone: (555) 210-9090</p>
           <p>Email: service@griswoldplumbing.com</p>
           <p>Address: 214 Maple Ave, Riverside, CA</p>

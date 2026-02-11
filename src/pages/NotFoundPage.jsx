@@ -8,7 +8,7 @@ export default function NotFoundPage() {
     <Container>
       <Card>
         <h1 className="text-3xl font-bold">Page not found</h1>
-        <p className="mt-2 text-slate-400">The page you requested does not exist.</p>
+        <p className="mt-2 text-slate-200">The page you requested does not exist.</p>
         <Button as={Link} to="/" className="mt-4">
           Return home
         </Button>

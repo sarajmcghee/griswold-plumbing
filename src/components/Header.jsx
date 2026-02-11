@@ -25,7 +25,7 @@ export default function Header() {
               className={({ isActive }) =>
                 [
                   'focus-ring rounded-md px-3 py-2 text-sm font-medium transition',
-                  isActive ? 'bg-brand-600 text-white' : 'text-slate-300 hover:bg-slate-800'
+                  isActive ? 'bg-brand-600 text-white' : 'text-slate-200 hover:bg-slate-800'
                 ].join(' ')
               }
             >

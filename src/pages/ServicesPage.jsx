@@ -16,12 +16,12 @@ export default function ServicesPage() {
   return (
     <Container className="space-y-6">
       <header className="space-y-2">
-        <div className="max-w-md text-brand-300">
+        <div className="max-w-md text-brand-200">
           <PlumbingScene />
         </div>
-        <p className="text-sm font-semibold uppercase tracking-wide text-brand-300">Our Services</p>
+        <p className="text-sm font-semibold uppercase tracking-wide text-brand-200">Our Services</p>
         <h1 className="text-3xl font-bold text-slate-100">Comprehensive plumbing solutions</h1>
-        <p className="max-w-3xl text-slate-400">
+        <p className="max-w-3xl text-slate-200">
           Whether it is a quick repair or full system upgrade, we deliver clean workmanship and clear communication from start to finish.
         </p>
       </header>
@@ -31,12 +31,12 @@ export default function ServicesPage() {
           const ServiceIcon = iconByServiceSlug[service.slug] || PipeIcon;
           return (
             <Card key={service.slug} className="border border-slate-800">
-              <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-brand-300">
+              <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-brand-200">
                 <ServiceIcon className="h-5 w-5" />
               </span>
               <h2 className="text-xl font-semibold">{service.name}</h2>
-              <p className="mt-2 text-sm text-slate-400">{service.details}</p>
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-300">
+              <p className="mt-2 text-sm text-slate-200">{service.details}</p>
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-200">
                 {service.features.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
